@@ -1,0 +1,15 @@
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/hotswap_agent.xml
+/.idea/jarRepositories.xml
+/maven-unit-test.iml
+/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml
+/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_1.xml
+/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_1.xml
+/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_1.xml
+/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_1.xml
+/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
