@@ -34,6 +34,6 @@ jobs:
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
       with:
-        api_key: 7c640ef6-7bfb-4e2e-acd7-78997448baa6
+        api_key: 13d1a121-b3a6-469e-9e5a-21d3bffd97ca
         test_framework: junit
         test_path: target/surefire-reports/**
