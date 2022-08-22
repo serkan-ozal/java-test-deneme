@@ -15,5 +15,11 @@ public class TestMessageBuilder {
     public void testNumber10() {
         assertEquals(10, MessageBuilder.getNumber10());
     }
+    
+    
+    @Test
+    public void testNumber11() {
+        assertEquals(11, MessageBuilder.getNumber10());
+    }
 
 }
