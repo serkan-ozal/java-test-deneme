@@ -30,6 +30,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
+      if: always()
       run: mvn clean install
     - name: Analyze Test and/or Coverage Results
       if: always()
