@@ -35,6 +35,6 @@ jobs:
       if: always()
       uses: runforesight/foresight-test-kit-action@v1
       with:
-        api_key: 13d1a121-b3a6-469e-9e5a-21d3bffd97ca
+        api_key: 3f3f60fe-b8f8-49f4-a954-ba6075f5a217
         test_framework: junit
         test_path: target/surefire-reports/**
