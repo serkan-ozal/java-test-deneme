@@ -30,11 +30,13 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install -fae
+      run: mvn clean install
     - name: Analyze Test and/or Coverage Results
-      if: always()
       uses: runforesight/foresight-test-kit-action@v1
+      if: success() || failure()
       with:
         api_key: 3f3f60fe-b8f8-49f4-a954-ba6075f5a217
-        test_framework: junit
+        test_format: JUNIT
+        test_framework: JUNIT
         test_path: target/surefire-reports/**
+
