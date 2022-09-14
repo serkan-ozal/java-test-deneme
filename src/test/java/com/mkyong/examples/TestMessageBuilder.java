@@ -13,9 +13,7 @@ public class TestMessageBuilder {
 
     @Test
     public void testNumber10() {
-         try {
-            Thread.sleep(40000);
-        } catch (Exception ex) {}
+
         assertEquals(10, MessageBuilder.getNumber10());
 
     }
