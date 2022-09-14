@@ -8,12 +8,12 @@ public class TestMessageBuilder {
 
     @Test
     public void testHelloWorld() {
-        assertEquals("hello world", MessageBuilder.getHelloWorld());
+        assertEquals("hello world1", MessageBuilder.getHelloWorld());
     }
 
     @Test
     public void testNumber10() {
-        assertEquals(10, MessageBuilder.getNumber10());
+        assertEquals(101, MessageBuilder.getNumber10());
     }
     
   
