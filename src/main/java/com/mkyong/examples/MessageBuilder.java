@@ -8,7 +8,7 @@ public class MessageBuilder {
 
     public static int getNumber10(){
         try {
-            Thread.sleep(40000);
+            Thread.sleep(10000);
         } catch (Exception ex) {}
         return 10;
     }
