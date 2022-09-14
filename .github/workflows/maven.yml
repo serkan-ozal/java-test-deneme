@@ -35,7 +35,8 @@ jobs:
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
       with:
-        api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc
+        api_key: f6576981-89a2-4490-a5bc-d5d5f740d0fa
+        # api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc
         # api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
         # api_key: 3f3f60fe-b8f8-49f4-a954-ba6075f5a217
         test_format: JUNIT
