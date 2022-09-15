@@ -13,8 +13,8 @@ on:
   workflow_dispatch:
 
 env:
-  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.me
-  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.me
+  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.us
+  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.us
 
 jobs:
   build:
@@ -35,9 +35,8 @@ jobs:
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
       with:
-        api_key: 7489e98b-e6ab-45ca-a881-30f361799e77
-        # api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc
-        # api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
+        # api_key: 7489e98b-e6ab-45ca-a881-30f361799e77
+        api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
         # api_key: 3f3f60fe-b8f8-49f4-a954-ba6075f5a217
         test_format: JUNIT
         test_framework: JUNIT
