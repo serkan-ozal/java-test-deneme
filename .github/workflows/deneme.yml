@@ -32,7 +32,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: Analyze Test and/or Coverage Results
-      uses: runforesight/foresight-test-kit-action@v1
+      uses: runforesight/foresight-test-kit-action@on-demand-api-key
       if: success() || failure()
       with:
         # api_key: 7489e98b-e6ab-45ca-a881-30f361799e77
