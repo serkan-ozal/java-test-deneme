@@ -35,6 +35,6 @@ jobs:
     - name: Collect Workflow Telemetry
       uses: runforesight/foresight-workflow-kit-action@on-demand-api-key
       if: success() || failure()
-      with:
+      # with:
         # api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc      
-        stage: lab
+
