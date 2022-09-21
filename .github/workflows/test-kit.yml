@@ -1,0 +1,43 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Foresight TestKit Action
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.me
+  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.me
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: mvn clean install
+    - name: Analyze Test and/or Coverage Results
+      uses: runforesight/foresight-test-kit-action@on-demand-api-key
+      if: success() || failure()
+      with:
+        api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc
+        # api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
+        # api_key: 3f3f60fe-b8f8-49f4-a954-ba6075f5a217
+        test_format: JUNIT
+        test_framework: JUNIT
+        test_path: target/surefire-reports/**
