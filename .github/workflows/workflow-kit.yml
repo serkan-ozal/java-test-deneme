@@ -34,7 +34,7 @@ jobs:
       run: mvn clean install
     # Make sure you put workflow kit action on top of all the steps 
     - name: Collect Workflow Telemetry
-      uses: runforesight/foresight-workflow-kit-action@on-demand-api-key
+      uses: runforesight/foresight-workflow-kit-action@v1.2.0
       if: success() || failure()
       # with:
         # api_key: e0c9ec9a-bdbe-4449-9d42-6ab02648e2dc      
