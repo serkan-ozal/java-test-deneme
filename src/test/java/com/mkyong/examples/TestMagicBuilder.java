@@ -8,6 +8,7 @@ public class TestMagicBuilder {
 
     @Test
     public void testLucky() {
+        System.out.println("testLucky");
         assertEquals(7, MagicBuilder.getLucky());
     }
 
