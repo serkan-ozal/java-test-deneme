@@ -8,7 +8,7 @@ public class TestMessageBuilder {
 
     @Test
     public void testHelloWorld() {
-        System.out.println("testHelloWorld");
+        System.out.println("Hello World");
         assertEquals("hello world", MessageBuilder.getHelloWorld());
     }
 
