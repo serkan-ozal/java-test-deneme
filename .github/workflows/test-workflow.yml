@@ -26,7 +26,7 @@ jobs:
       uses: runforesight/foresight-workflow-kit-action@v1
       if: success() || failure()
       with:
-        api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b 
+        api_key: a8affa40-476f-4259-831d-041c32117fa6
         # d06a3675-c8ac-4fbf-a80d-b0e5aaae4924    
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -41,7 +41,7 @@ jobs:
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
       with:
-        api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
+        api_key: a8affa40-476f-4259-831d-041c32117fa6
         # d06a3675-c8ac-4fbf-a80d-b0e5aaae4924
         test_format: JUNIT
         test_framework: JUNIT
