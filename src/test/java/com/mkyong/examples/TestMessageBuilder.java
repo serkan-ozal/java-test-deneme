@@ -21,6 +21,6 @@ public class TestMessageBuilder {
     @Test
     public void testNumber100() {
         try { Thread.sleep(100*3);} catch(Exception ex) {}
-        assertEquals(100, MessageBuilder.getNumber10());
+        assertEquals(10, MessageBuilder.getNumber10());
     }
 }
