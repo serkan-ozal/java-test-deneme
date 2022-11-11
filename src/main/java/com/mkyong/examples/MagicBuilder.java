@@ -8,4 +8,10 @@ public class MagicBuilder {
         return lucky;
     }
 
+    
+      public static int deneme() {
+        int lucky = 7;
+        int sum = 5;
+        return lucky;
+    }
 }
