@@ -26,10 +26,16 @@ public class TestMessageBuilder {
      
     @Test
     public void testNumber1002() {
-        try { Thread.sleep(100*3);} catch(Exception ex) {}
-        assertEquals(1002, MessageBuilder.getNumber10());
+        try { Thread.sleep(100*9);} catch(Exception ex) {}
+        assertEquals(10, MessageBuilder.getNumber10());
     }
     
+      
+    @Test
+    public void testNumber1003() {
+        try { Thread.sleep(100*9);} catch(Exception ex) {}
+        assertEquals(1002, MessageBuilder.getNumber10());
+    }
     
     @Test
     public void testNumber100() {
