@@ -18,7 +18,8 @@ env:
   ON_DEMAND_API_KEY_BASE_URL: https://api-public.service.runforesight.me
 
 jobs:
-  build maven demo with|pipe:
+  build:
+    name: build maven demo with|pipe
     runs-on: ubuntu-latest
     steps:
     # Make sure you put workflow kit action on top of all the steps 
