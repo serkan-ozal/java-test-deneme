@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
 
 env:
-  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.me
-  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.me
-  ON_DEMAND_API_KEY_BASE_URL: https://api-public.service.runforesight.me
+  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.us
+  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.us
+  ON_DEMAND_API_KEY_BASE_URL: https://api-public.service.runforesight.us
 
 jobs:
   build:
@@ -26,7 +26,8 @@ jobs:
       uses: runforesight/foresight-workflow-kit-action@v1
       if: success() || failure()
       with:
-        api_key: ${{secrets.FORESIGHT_API_KEY}}      
+        api_key: b398f733-8d5f-402f-aa8a-91b2d3cf53a7
+        #api_key: ${{secrets.FORESIGHT_API_KEY}}      
     - uses: actions/checkout@v3
     - name: Set up JDK 11
       uses: actions/setup-java@v3
@@ -40,7 +41,8 @@ jobs:
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
       with:
-        api_key: ${{secrets.FORESIGHT_API_KEY}}
+        #api_key: ${{secrets.FORESIGHT_API_KEY}}
+        api_key: b398f733-8d5f-402f-aa8a-91b2d3cf53a7
         test_format: JUNIT
         test_framework: JUNIT
         test_path: target/surefire-reports/**   
