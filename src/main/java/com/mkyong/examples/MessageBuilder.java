@@ -8,9 +8,16 @@ public class MessageBuilder {
 
     public static int getNumber10(){
         try {
-            Thread.sleep(100);
+            Thread.sleep(10);
         } catch (Exception ex) {}
         return 10;
+    }
+    
+    public static int getNumber20(){
+        try {
+            Thread.sleep(20);
+        } catch (Exception ex) {}
+        return 20;
     }
 
 }
