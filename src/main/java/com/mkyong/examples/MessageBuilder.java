@@ -19,5 +19,12 @@ public class MessageBuilder {
         } catch (Exception ex) {}
         return 20;
     }
+    
+    public static int getNumber30(){
+        try {
+            Thread.sleep(30);
+        } catch (Exception ex) {}
+        return 30;
+    }
 
 }
