@@ -41,13 +41,11 @@ jobs:
       run: |
         echo "Githob workspace $GITHUB_WORKSPACE"
         echo "Listing files in $GITHUB_WORKSPACE ..."
-        ls $GITHUB_WORKSPACE
-        echo "Listing files in $GITHUB_WORKSPACE/.git ..."
-        ls $GITHUB_WORKSPACE/.git
+        ls -al $GITHUB_WORKSPACE
         echo "Removing $GITHUB_WORKSPACE/.git ..."
         rm -rf $GITHUB_WORKSPACE/.git
         echo "Listing files in $GITHUB_WORKSPACE ..."
-        ls $GITHUB_WORKSPACE
+        ls -al $GITHUB_WORKSPACE
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
