@@ -39,14 +39,14 @@ jobs:
       run: mvn clean install
     - name: Remove git folder
       run: |
-        echo "Githob workspace $env:GITHUB_WORKSPACE"
-        echo "Listing files in $env:GITHUB_WORKSPACE ..."
-        ls $env:GITHUB_WORKSPACE
-        echo "Listing files in $env:GITHUB_WORKSPACE/.git ..."
-        ls $env:GITHUB_WORKSPACE/.git
-        echo "Removing $env:GITHUB_WORKSPACE/.git ..."
-        rm -rf $env:GITHUB_WORKSPACE/.git
-        echo "Listing files in $env:GITHUB_WORKSPACE ..."
+        echo "Githob workspace $GITHUB_WORKSPACE"
+        echo "Listing files in $GITHUB_WORKSPACE ..."
+        ls $GITHUB_WORKSPACE
+        echo "Listing files in $GITHUB_WORKSPACE/.git ..."
+        ls $GITHUB_WORKSPACE/.git
+        echo "Removing $GITHUB_WORKSPACE/.git ..."
+        rm -rf $GITHUB_WORKSPACE/.git
+        echo "Listing files in $GITHUB_WORKSPACE ..."
         ls $env:GITHUB_WORKSPACE
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
