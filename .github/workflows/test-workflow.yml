@@ -28,15 +28,26 @@ jobs:
       with:
         api_key: 46febb77-6efa-4485-8f9d-f2d13e6e6486
         #api_key: ${{secrets.FORESIGHT_API_KEY}}      
-#    - uses: actions/checkout@v3
-#    - name: Set up JDK 11
-#      uses: actions/setup-java@v3
-#      with:
-#        java-version: '11'
-#        distribution: 'temurin'
-#        cache: maven
-#    - name: Build with Maven
-#      run: mvn clean install
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: mvn clean install
+    - name: Remove git folder
+      run: |
+        echo "Githob workspace $env:GITHUB_WORKSPACE"
+        echo "Listing files in $env:GITHUB_WORKSPACE ..."
+        ls $env:GITHUB_WORKSPACE
+        echo "Listing files in $env:GITHUB_WORKSPACE/.git ..."
+        ls $env:GITHUB_WORKSPACE/.git
+        echo "Removing $env:GITHUB_WORKSPACE/.git ..."
+        rm -rf $env:GITHUB_WORKSPACE/.git
+        echo "Listing files in $env:GITHUB_WORKSPACE ..."
+        ls $env:GITHUB_WORKSPACE
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
