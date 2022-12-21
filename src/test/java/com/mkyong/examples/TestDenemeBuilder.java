@@ -17,7 +17,7 @@ public class TestDenemeBuilder {
     @Test
     public void testDeneme2() {
         try { Thread.sleep(1000*3);} catch(Exception ex) {}
-        if (random.nextInt(10) < 2) {
+        if (random.nextInt(10) < 3) {
             assertEquals(100, MessageBuilder.getNumber10());
         } else {
             assertEquals(10, MessageBuilder.getNumber10());
@@ -27,7 +27,7 @@ public class TestDenemeBuilder {
     @Test
     public void testDeneme3() {
         try { Thread.sleep(100*3);} catch(Exception ex) {}
-        if (random.nextInt(10) < 3) {
+        if (random.nextInt(10) < 4) {
             assertEquals(100, MessageBuilder.getNumber10());
         } else {
             assertEquals(10, MessageBuilder.getNumber10());
