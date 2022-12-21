@@ -17,7 +17,7 @@ public class TestMessageBuilder {
     @Test
     public void testNumber10() {
         try { Thread.sleep(1000*3);} catch(Exception ex) {}
-        if (random.nextInt(10) < 2) {
+        if (random.nextInt(10) < 3) {
             assertEquals(100, MessageBuilder.getNumber10());
         } else {
             assertEquals(10, MessageBuilder.getNumber10());
