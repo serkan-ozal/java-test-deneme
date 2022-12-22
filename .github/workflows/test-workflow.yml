@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v2
       if: success() || failure()
       with:
-        name: t*.xml
+        name: TEST-com.mkyong.examples.TestMessageBuilder.xml
         path: target/surefire-reports/**   
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
