@@ -5,21 +5,17 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestMessageBuilder {
+public class TestDenemeBuilder {
     
-    private Random random = new Random();
+     private Random random = new Random();
 
     @Test
-    public void testHelloWorld() {
-        System.out.println("Hello World");
+    public void testDeneme1() {
         assertEquals("hello world", MessageBuilder.getHelloWorld());
     }
 
     @Test
-    public void testNumber10() {
-
-
-
+    public void testDeneme2() {
         try { Thread.sleep(1000*3);} catch(Exception ex) {}
         if (random.nextInt(10) < 3) {
             assertEquals(100, MessageBuilder.getNumber10());
@@ -29,17 +25,25 @@ public class TestMessageBuilder {
     }
     
     @Test
-    public void testNumber1001() {
+    public void testDeneme3() {
         try { Thread.sleep(100*3);} catch(Exception ex) {}
-        if (random.nextInt(10) < 3) {
+        if (random.nextInt(10) < 4) {
             assertEquals(100, MessageBuilder.getNumber10());
         } else {
             assertEquals(10, MessageBuilder.getNumber10());
         }
     }
     
+     
     @Test
-    public void testNumber1002() {
+    public void testDeneme4() {
+        try { Thread.sleep(100*9);} catch(Exception ex) {}
+        assertEquals(10, MessageBuilder.getNumber10());
+    }
+    
+      
+    @Test
+    public void testDeneme5() {
         try { Thread.sleep(100*9);} catch(Exception ex) {}
         if (random.nextInt(10) < 4) {
             assertEquals(100, MessageBuilder.getNumber10());
@@ -48,25 +52,13 @@ public class TestMessageBuilder {
         }
     }
     
-      
     @Test
-    public void testNumber1003() {
-        try { Thread.sleep(100*9);} catch(Exception ex) {}
-        if (random.nextInt(10) < 5) {
-            assertEquals(100, MessageBuilder.getNumber10());
-        } else {
-            assertEquals(10, MessageBuilder.getNumber10());
-        }
-    }
-    
-    @Test
-    public void testNumber100() {
+    public void testDeneme6() {
         try { Thread.sleep(100*3);} catch(Exception ex) {}
         if (random.nextInt(10) < 5) {
             assertEquals(100, MessageBuilder.getNumber10());
         } else {
             assertEquals(10, MessageBuilder.getNumber10());
         }
-
     }
 }
