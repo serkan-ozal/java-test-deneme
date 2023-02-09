@@ -48,4 +48,4 @@ jobs:
         test_format: JUNIT
         test_framework: JUNIT
         test_path: target/surefire-reports/**
-        #cli_tag: snapshot/fix/premature-archieve-end
+        cli_tag: snapshot/fix/premature-archieve-end
