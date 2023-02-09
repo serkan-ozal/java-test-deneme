@@ -40,7 +40,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: Analyze Test and/or Coverage Results
-      uses: runforesight/foresight-test-kit-action@v1
+      uses: runforesight/foresight-test-kit-action@feature/cli-tag-support
       if: success() || failure()
       with:
         #api_key: ${{secrets.FORESIGHT_API_KEY}}
