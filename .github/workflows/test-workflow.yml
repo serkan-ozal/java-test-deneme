@@ -40,7 +40,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: Analyze Test and/or Coverage Results
-      uses: runforesight/foresight-test-kit-action@feature/cli-tag-support
+      uses: runforesight/foresight-test-kit-action@v1
       if: success() || failure()
       with:
         #api_key: ${{secrets.FORESIGHT_API_KEY}}
@@ -48,4 +48,4 @@ jobs:
         test_format: JUNIT
         test_framework: JUNIT
         test_path: target/surefire-reports/**
-        cli_tag: snapshot/fix/premature-archieve-end
+        #cli_tag: snapshot/fix/premature-archieve-end
